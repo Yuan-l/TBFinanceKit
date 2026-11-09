@@ -238,6 +238,18 @@ static NSTimeInterval const kPollInterval = 3.0;
     }];
 }
 
+- (NSString *)metricText:(NSDictionary *)d key:(NSString *)key {
+    return [self metricText:d key:key fmt:nil suffix:nil];
+}
+
+- (NSString *)metricText:(NSDictionary *)d key:(NSString *)key suffix:(NSString *)suffix {
+    return [self metricText:d key:key fmt:nil suffix:suffix];
+}
+
+- (NSString *)metricText:(NSDictionary *)d key:(NSString *)key fmt:(NSString *)fmt {
+    return [self metricText:d key:key fmt:fmt suffix:nil];
+}
+
 - (NSString *)metricText:(NSDictionary *)d key:(NSString *)key fmt:(NSString *)fmt suffix:(NSString *)suffix {
     id v = d[key];
     if ([v isKindOfClass:[NSNumber class]]) {

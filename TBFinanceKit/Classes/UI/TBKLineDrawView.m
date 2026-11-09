@@ -110,7 +110,6 @@ static CGFloat const kRightPadding    = 52.0;   // 右侧价格刻度区
 
     // 网格线 + 价格刻度
     UIFont *tickFont = [UIFont systemFontOfSize:9];
-    [@[UIColor colorWithRed:0.92 green:0.92 blue:0.94 alpha:1] enumerateObjectsUsingBlock:^(id c, NSUInteger i, BOOL *s){}];
     for (int i = 0; i <= 4; i++) {
         double price = maxP - (maxP - minP) * i / 4.0;
         CGFloat y = py(price);

@@ -46,6 +46,12 @@ static NSArray<NSString *> *KLineHosts(void) {
     return hosts;
 }
 
+@implementation TBFinanceFundInfo
+@end
+
+@implementation TBFinanceOptionInfo
+@end
+
 @implementation TBFinanceService
 
 + (instancetype)sharedService {
